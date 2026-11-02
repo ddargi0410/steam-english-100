@@ -22,12 +22,12 @@
 <div id="unsupported" class="unsupported" hidden></div>
 <section id="home">
  <div class="weekPanel"><div class="weekFilters" id="weekFilters" role="group" aria-label="연습할 수업 주차">
- <button type="button" data-week="5" aria-pressed="true">5주차 · 실험 보완</button><button type="button" data-week="6" aria-pressed="false">6주차 · 피드백</button><button type="button" data-week="review" aria-pressed="false">3·4주차 복습</button><button type="button" data-week="all" aria-pressed="false">전체 보기</button>
+ <button type="button" data-week="5" aria-pressed="true">5주차 · 포스터·퀴즈</button><button type="button" data-week="6" aria-pressed="false">6주차 · 발표 준비</button><button type="button" data-week="review" aria-pressed="false">3·4주차 복습</button><button type="button" data-week="all" aria-pressed="false">전체 보기</button>
  </div><p id="weekSummary" class="weekSummary" aria-live="polite"></p></div>
- <div class="hero"><div><div class="eyebrow">200 classroom expressions</div><h1 id="weekHeading">실험을 보완하는 말,<br><span>영어로 준비해요.</span></h1><p>단어를 고르고, 문장을 조립하고, 기억해서 꺼내 봐요.<br>마이크 없이도 끝까지! 말하기는 선택 보너스예요.</p><div class="actions"><button class="primary" id="priorityStart">5문장 게임 시작 →</button><button class="secondary" id="speakingStart">말하기만 연습</button><button class="quiet" id="openQuick">수업 중 바로 보기 ↓</button><button class="quiet" id="reviewStart">복습하기 <span id="reviewBadge">0</span></button></div></div><div class="heroCard"><small>이번 수업에서 바로 쓸 한 문장</small><blockquote id="heroEnglish"></blockquote><p id="heroKorean"></p><button id="heroListen">▶ 소리로 들어보기</button></div></div>
- <div class="stats"><div class="stat"><strong id="learnedStat">0 / 200</strong><span>전체 학습한 문장</span></div><div class="stat"><strong id="streakStat">0일</strong><span>이어 연습한 날</span></div><div class="stat"><strong id="xpStat">0 XP</strong><span>학습 경험치</span></div></div>
+ <div class="hero"><div><div class="eyebrow">220 classroom expressions</div><h1 id="weekHeading">포스터와 영어 퀴즈,<br><span>함께 완성해요.</span></h1><p>단어를 고르고, 문장을 조립하고, 기억해서 꺼내 봐요.<br>마이크 없이도 끝까지! 말하기는 선택 보너스예요.</p><div class="actions"><button class="primary" id="priorityStart">5문장 게임 시작 →</button><button class="secondary" id="speakingStart">말하기만 연습</button><button class="quiet" id="openQuick">수업 중 바로 보기 ↓</button><button class="quiet" id="reviewStart">복습하기 <span id="reviewBadge">0</span></button></div></div><div class="heroCard"><small>이번 수업에서 바로 쓸 한 문장</small><blockquote id="heroEnglish"></blockquote><p id="heroKorean"></p><button id="heroListen">▶ 소리로 들어보기</button></div></div>
+ <div class="stats"><div class="stat"><strong id="learnedStat">0 / 220</strong><span>전체 학습한 문장</span></div><div class="stat"><strong id="streakStat">0일</strong><span>이어 연습한 날</span></div><div class="stat"><strong id="xpStat">0 XP</strong><span>학습 경험치</span></div></div>
  <details class="quickClass" id="quickClass"><summary>수업 중 바로 보기 <small>시작 · 쉬는 시간 · 다시 모으기 · 마무리 멘트를 크게 읽어요.</small></summary><div class="quickBody">
- <div class="quickTop"><label for="quickWeek">수업 주차</label><select id="quickWeek"><option value="5">5주차 · 실험 보완</option><option value="6">6주차 · 동료 피드백</option></select></div>
+ <div class="quickTop"><label for="quickWeek">수업 주차</label><select id="quickWeek"><option value="5">5주차 · 포스터·퀴즈</option><option value="6">6주차 · 발표 준비</option></select></div>
  <div class="sceneTabs" id="sceneTabs" role="group" aria-label="교실 진행 장면"></div><div id="quickScript" aria-live="polite"></div>
  <div class="quickTools"><button class="secondary" id="quickListen">▶ 전체 듣기</button><button class="secondary" id="quickSlow">▶ 천천히</button><button class="quiet" id="quickStop">읽기 멈추기</button></div><p class="quickHint">바로 보기는 마이크 없이 사용해요. 듣기와 읽기는 학습 진도·XP에 반영하지 않아요.</p></div></details>
  <div class="sectionrow"><h2>수업 장면으로 골라요</h2><span class="small" id="unitsHint">게임 3단계 + 선택 말하기</span></div><div class="units" id="units"></div>
@@ -43,11 +43,12 @@
  <div class="card sessionDone" id="sessionDone" hidden><div class="doneIcon" aria-hidden="true">✓</div><div class="eyebrow">Practice complete</div><h2 id="doneTitle">오늘의 말하기 완료!</h2><p id="doneBody"></p><div class="doneNumbers"><div><strong id="doneCount"></strong><span>학습한 문장</span></div><div><strong id="doneXP"></strong><span>이번 연습 경험치</span></div></div><div class="actions" style="justify-content:center"><button class="primary" id="morePractice">다음 문장 연습 →</button><button class="secondary" id="doneHome">학습 홈</button></div></div>
 </section>
 <details class="privacy"><summary>게임·말하기·학습 기록 안내</summary><ul><li><strong>기본 학습은 마이크 없이 끝낼 수 있어요.</strong> 단어 뜻 고르기, 예문 순서대로 문장 배열하기, 한국어를 보고 떠올리기를 진행합니다. 힌트나 정답을 보아도 연습 경험치를 받습니다. ‘학습한 문장’은 게임 또는 말하기 연습을 마친 문장이며, 숙달도나 발음 인증이 아닙니다. 게임 완료·본인 확인·힌트 사용·음성인식 확인은 학습 기록에 구분해 저장합니다.</li><li><strong>표현 일치 확인</strong>은 브라우저가 받아쓴 문장과 목표 문장을 비교합니다. 발음의 정확도·억양·유창성을 측정하거나 발음 점수를 매기지 않습니다.</li><li>기본 ‘편하게’ 기준은 문장 전체에서 맞게 인식된 핵심 단어를 참고하여 일부 빠지거나 다르게 받아쓴 단어를 허용합니다. 예를 들어 문맥에 맞는 result/resort, which/ricard 혼동을 허용합니다. 숫자·부정·같다/다르다처럼 뜻을 바꾸는 표현은 따로 확인합니다. ‘꼼꼼하게’는 축약형·숫자 표기 등을 정리한 뒤 문장이 일치해야 통과합니다. 이 기능은 전사된 글자를 비교하는 연습 도구입니다. 모든 동의 표현이나 의미 차이를 이해하는 것은 아니며, 실제 발음 정확도를 평가하지 않습니다.</li><li>음성인식 오류가 있을 수 있습니다. 인식된 말과 본인 녹음을 함께 확인하세요. 알아듣지 못한 경우는 오답이나 발음 오류로 채점하지 않습니다. 확정되지 않은 인식 내용은 참고용으로만 보여 줍니다.</li><li>음성인식은 브라우저 제공 서비스로 전송될 수 있고 인터넷 연결이 필요할 수 있습니다. 문장 인식 중에는 앱의 녹음 기능을 함께 켜지 않습니다. 내 목소리를 다시 들으려면 별도의 ‘녹음·다시 듣기’ 버튼을 눌러 한 번 더 말하세요. 녹음 파일은 이 브라우저의 메모리에서 재생합니다. 녹음 연습 중에는 마이크 연결을 재사용하고, 녹음 사이에는 오디오 트랙을 음소거합니다. 문장 인식 시작·홈·연습 완료·연결 끊기 때는 녹음 연결을 해제합니다. 짧은 화면 전환은 잠시 기다리고, 화면 이탈이 이어지면 연습을 중단합니다. 돌아온 뒤 버튼을 눌러 같은 문장에서 다시 시작할 수 있습니다. 브라우저의 마이크 표시가 연결 유지 중에도 보일 수 있어요. 권한을 다시 묻는지는 브라우저와 사이트 설정에 따라 달라요. 앱은 녹음을 서버에 저장하지 않습니다. 저장 버튼을 누르면 기기에 파일이 내려받아집니다.</li><li>Chrome·Edge 최신 버전에서 먼저 시도해 보세요. 지원 여부와 마이크 권한은 브라우저·기기마다 다릅니다. 음성인식이 지원되지 않아도 듣기와 가능한 경우 녹음 연습을 할 수 있습니다.</li><li>학습 진도는 현재 브라우저에 저장합니다. 다른 기기와 자동으로 동기화되지 않으며, 브라우저 데이터를 지우면 사라집니다.</li></ul><div class="tools"><button class="secondary" id="exportProgress">학습 기록 내려받기</button><button class="quiet" id="resetProgress">진도 초기화</button></div><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition" target="_blank" rel="noopener">음성인식 지원 안내</a> · <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia" target="_blank" rel="noopener">마이크 권한 안내</a></p></details>
-<div class="footerText">Future Incheon Global STEAM · 교사가 수업 중 실제로 말할 표현 200개 · 5·6주차 표현 100개 추가</div>
+<div class="footerText">Future Incheon Global STEAM · 교사가 수업 중 실제로 말할 표현 220개 · 포스터·퀴즈부터 발표 준비까지</div>
 </main><div class="toast" id="toast" hidden role="status"></div>
-<script id="lessonData" type="application/json">{
-  "title": "STEAM English — 교사 표현 200",
-  "schedule": "담당: 3·4·5·6주차",
+<script id="lessonData" type="application/json">
+{
+  "title": "STEAM English — 교사 표현 220",
+  "schedule": "담당: 3·4·5·6주차 · 5주차 포스터·영어 미션 퀴즈 · 6주차 발표 준비",
   "units": [
     {
       "id": 1,
@@ -100,7 +101,7 @@
     {
       "id": 9,
       "title": "해결 방법 개선하기",
-      "week": 5,
+      "week": 4,
       "description": "결과를 바탕으로 아이디어 다듬기"
     },
     {
@@ -111,39 +112,39 @@
     },
     {
       "id": 11,
-      "week": 5,
+      "week": 4,
       "title": "지난 결과에서 다시 시작하기",
       "description": "실험 기록을 열고 오늘의 작은 목표 정하기"
     },
     {
       "id": 12,
-      "week": 5,
+      "week": 4,
       "title": "바꿀 한 가지 정하기",
       "description": "개선할 점을 고르고 공정한 비교 준비하기"
     },
     {
       "id": 13,
-      "week": 5,
+      "week": 4,
       "title": "다시 실험하고 기록하기",
       "description": "같은 기준으로 재측정하고 관찰을 남기기"
     },
     {
       "id": 14,
-      "week": 5,
+      "week": 4,
       "title": "근거와 지역 적용 살피기",
       "description": "결과가 말해 주는 범위와 실제 사용 조건 살피기"
     },
     {
       "id": 15,
       "week": 5,
-      "title": "개선 결과와 포스터 기획",
-      "description": "바꾼 점을 공유하고 포스터에 넣을 근거 고르기"
+      "title": "포스터에 담을 내용 고르기",
+      "description": "문제·실험·해결안을 설명할 근거 고르기"
     },
     {
       "id": 16,
       "week": 6,
-      "title": "피드백 시간 열기",
-      "description": "짝모둠을 만나 설명하고 듣는 순서 정하기"
+      "title": "짝모둠과 발표 연습하기",
+      "description": "문제·실험·해결안을 설명하고 서로 들어 보기"
     },
     {
       "id": 17,
@@ -154,20 +155,32 @@
     {
       "id": 18,
       "week": 6,
-      "title": "의견을 듣고 수정 선택하기",
-      "description": "조언의 이유를 살피고 반영할 점 정하기"
+      "title": "연습 피드백을 듣고 다듬기",
+      "description": "조언의 이유를 살피고 발표를 다듬을 점 정하기"
     },
     {
       "id": 19,
-      "week": 6,
+      "week": 5,
       "title": "소개 포스터 다듬기",
       "description": "문제·실험·근거·해결안을 읽기 쉽게 연결하기"
     },
     {
       "id": 20,
-      "week": 6,
+      "week": 5,
       "title": "미션 퀴즈와 다음 단계",
       "description": "방문객용 질문을 점검하고 이번 주 작업 마치기"
+    },
+    {
+      "id": 21,
+      "week": 5,
+      "title": "포스터와 영어 미션 퀴즈 3개",
+      "description": "포스터 아래에 영어 퀴즈를 넣고 답과 연결하기"
+    },
+    {
+      "id": 22,
+      "week": 6,
+      "title": "발표 역할·1분 영어 대본·성찰",
+      "description": "모두 참여하는 5분 발표와 개인별 1분 부스 소개 준비"
     }
   ],
   "phrases": [
@@ -2090,7 +2103,7 @@
       ],
       "tip": "‘pick up where we left off’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "시작",
-      "essential": true
+      "essential": false
     },
     {
       "id": 102,
@@ -2153,7 +2166,7 @@
       ],
       "tip": "‘improve’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "시작",
-      "essential": true
+      "essential": false
     },
     {
       "id": 105,
@@ -2342,7 +2355,7 @@
       ],
       "tip": "‘help’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "순회 지도",
-      "essential": true
+      "essential": false
     },
     {
       "id": 114,
@@ -2405,7 +2418,7 @@
       ],
       "tip": "‘everything else’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": true
+      "essential": false
     },
     {
       "id": 117,
@@ -2510,7 +2523,7 @@
       ],
       "tip": "‘measuring method’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": true
+      "essential": false
     },
     {
       "id": 122,
@@ -2531,7 +2544,7 @@
       ],
       "tip": "‘every result’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": true
+      "essential": false
     },
     {
       "id": 123,
@@ -2720,7 +2733,7 @@
       ],
       "tip": "‘support’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "순회 지도",
-      "essential": true
+      "essential": false
     },
     {
       "id": 132,
@@ -2804,7 +2817,7 @@
       ],
       "tip": "‘describe’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "순회 지도",
-      "essential": true
+      "essential": false
     },
     {
       "id": 136,
@@ -2930,7 +2943,7 @@
       ],
       "tip": "‘why’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "공유",
-      "essential": true
+      "essential": false
     },
     {
       "id": 142,
@@ -3035,7 +3048,7 @@
       ],
       "tip": "‘revised’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "마무리",
-      "essential": true
+      "essential": false
     },
     {
       "id": 147,
@@ -3140,7 +3153,7 @@
       ],
       "tip": "‘each other’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "시작",
-      "essential": true
+      "essential": false
     },
     {
       "id": 152,
@@ -3182,7 +3195,7 @@
       ],
       "tip": "‘get ready’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": false
+      "essential": true
     },
     {
       "id": 154,
@@ -3224,7 +3237,7 @@
       ],
       "tip": "‘while’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": true
+      "essential": false
     },
     {
       "id": 156,
@@ -3266,7 +3279,7 @@
       ],
       "tip": "‘leave time’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": false
+      "essential": true
     },
     {
       "id": 158,
@@ -3287,7 +3300,7 @@
       ],
       "tip": "‘strength’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": false
+      "essential": true
     },
     {
       "id": 159,
@@ -3329,7 +3342,7 @@
       ],
       "tip": "‘different teammate’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "순회 지도",
-      "essential": false
+      "essential": true
     },
     {
       "id": 161,
@@ -3371,7 +3384,7 @@
       ],
       "tip": "‘kind’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": true
+      "essential": false
     },
     {
       "id": 163,
@@ -3413,7 +3426,7 @@
       ],
       "tip": "‘claim’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "순회 지도",
-      "essential": true
+      "essential": false
     },
     {
       "id": 165,
@@ -3581,7 +3594,7 @@
       ],
       "tip": "‘return’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": true
+      "essential": false
     },
     {
       "id": 173,
@@ -3812,7 +3825,7 @@
       ],
       "tip": "‘connect to’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "순회 지도",
-      "essential": true
+      "essential": false
     },
     {
       "id": 184,
@@ -3833,7 +3846,7 @@
       ],
       "tip": "‘label’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "순회 지도",
-      "essential": false
+      "essential": true
     },
     {
       "id": 185,
@@ -3854,7 +3867,7 @@
       ],
       "tip": "‘caption’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "순회 지도",
-      "essential": false
+      "essential": true
     },
     {
       "id": 186,
@@ -3917,7 +3930,7 @@
       ],
       "tip": "‘sources’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": false
+      "essential": true
     },
     {
       "id": 189,
@@ -3980,7 +3993,7 @@
       ],
       "tip": "‘quiz question’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "활동 안내",
-      "essential": true
+      "essential": false
     },
     {
       "id": 192,
@@ -4170,48 +4183,468 @@
       "tip": "‘give yourselves a hand’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
       "phase": "마무리",
       "essential": false
+    },
+    {
+      "id": 201,
+      "unit": 21,
+      "english": "Today, we'll turn our findings into a poster.",
+      "korean": "오늘은 우리가 알아낸 내용을 포스터로 만들 거예요.",
+      "chunk": "Today, / we'll turn our findings / into a poster.",
+      "cue": "포스터 제작 활동을 시작할 때",
+      "words": [
+        {
+          "en": "findings",
+          "ko": "알아낸 내용"
+        },
+        {
+          "en": "poster",
+          "ko": "포스터"
+        }
+      ],
+      "tip": "‘findings’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "시작"
+    },
+    {
+      "id": 202,
+      "unit": 21,
+      "english": "Put three English mission questions at the bottom of your poster.",
+      "korean": "포스터 아래에 영어 미션 퀴즈 3개를 넣으세요.",
+      "chunk": "Put three English mission questions / at the bottom of your poster.",
+      "cue": "포스터와 퀴즈를 한 장에 구성하도록 안내할 때",
+      "words": [
+        {
+          "en": "three",
+          "ko": "세 개"
+        },
+        {
+          "en": "at the bottom",
+          "ko": "아래쪽에"
+        }
+      ],
+      "tip": "‘three’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "활동 안내"
+    },
+    {
+      "id": 203,
+      "unit": 21,
+      "english": "Include your local problem, experiment, results, and proposed solution.",
+      "korean": "우리 지역의 문제, 실험, 결과, 제안하는 해결 방법을 넣으세요.",
+      "chunk": "Include your local problem, / experiment, results, / and proposed solution.",
+      "cue": "포스터에 들어갈 내용을 확인할 때",
+      "words": [
+        {
+          "en": "include",
+          "ko": "포함하다"
+        },
+        {
+          "en": "proposed solution",
+          "ko": "제안하는 해결 방법"
+        }
+      ],
+      "tip": "‘include’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "활동 안내"
+    },
+    {
+      "id": 204,
+      "unit": 21,
+      "english": "Choose a picture or graph that supports your explanation.",
+      "korean": "설명을 뒷받침하는 사진이나 그래프를 고르세요.",
+      "chunk": "Choose a picture or graph / that supports your explanation.",
+      "cue": "어떤 자료를 포스터에 넣을지 고민하는 모둠에게",
+      "words": [
+        {
+          "en": "supports",
+          "ko": "뒷받침하다"
+        },
+        {
+          "en": "graph",
+          "ko": "그래프"
+        }
+      ],
+      "tip": "‘supports’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "순회 지도"
+    },
+    {
+      "id": 205,
+      "unit": 21,
+      "english": "Make the questions easy to understand without extra instructions.",
+      "korean": "추가 설명 없이도 이해할 수 있도록 문제를 만드세요.",
+      "chunk": "Make the questions easy to understand / without extra instructions.",
+      "cue": "방문객이 혼자 풀 수 있는 퀴즈인지 확인할 때",
+      "words": [
+        {
+          "en": "questions",
+          "ko": "질문들"
+        },
+        {
+          "en": "instructions",
+          "ko": "안내·설명"
+        }
+      ],
+      "tip": "‘questions’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "순회 지도"
+    },
+    {
+      "id": 206,
+      "unit": 21,
+      "english": "Write the answers separately so visitors can try the quiz first.",
+      "korean": "방문객이 먼저 풀어 볼 수 있도록 정답은 따로 적어 두세요.",
+      "chunk": "Write the answers separately / so visitors can try the quiz first.",
+      "cue": "퀴즈 정답을 준비하도록 안내할 때",
+      "words": [
+        {
+          "en": "answers",
+          "ko": "정답들"
+        },
+        {
+          "en": "separately",
+          "ko": "따로"
+        }
+      ],
+      "tip": "‘answers’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "활동 안내"
+    },
+    {
+      "id": 207,
+      "unit": 21,
+      "english": "Check that all three answers can be found in your poster.",
+      "korean": "세 문제의 정답을 모두 포스터에서 찾을 수 있는지 확인하세요.",
+      "chunk": "Check that all three answers / can be found in your poster.",
+      "cue": "퀴즈와 포스터 내용이 연결되는지 점검할 때",
+      "words": [
+        {
+          "en": "all three",
+          "ko": "세 개 모두"
+        },
+        {
+          "en": "found",
+          "ko": "찾을 수 있는"
+        }
+      ],
+      "tip": "‘all three’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "순회 지도"
+    },
+    {
+      "id": 208,
+      "unit": 21,
+      "english": "Take turns checking the English in your questions.",
+      "korean": "돌아가며 퀴즈 문제의 영어를 확인하세요.",
+      "chunk": "Take turns / checking the English in your questions.",
+      "cue": "모둠원이 함께 영어 문장을 점검하도록 할 때",
+      "words": [
+        {
+          "en": "take turns",
+          "ko": "돌아가며 하다"
+        },
+        {
+          "en": "checking",
+          "ko": "확인하기"
+        }
+      ],
+      "tip": "‘take turns’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "활동 안내"
+    },
+    {
+      "id": 209,
+      "unit": 21,
+      "english": "Use the same poster design for your project and mission quiz.",
+      "korean": "프로젝트 소개와 미션 퀴즈에 같은 포스터 디자인을 사용하세요.",
+      "chunk": "Use the same poster design / for your project and mission quiz.",
+      "cue": "포스터와 퀴즈의 모양을 통일하도록 도울 때",
+      "words": [
+        {
+          "en": "same",
+          "ko": "같은"
+        },
+        {
+          "en": "design",
+          "ko": "디자인"
+        }
+      ],
+      "tip": "‘same’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "순회 지도"
+    },
+    {
+      "id": 210,
+      "unit": 21,
+      "english": "Save your poster with all three quiz questions included.",
+      "korean": "퀴즈 3개가 모두 들어간 포스터를 저장하세요.",
+      "chunk": "Save your poster / with all three quiz questions included.",
+      "cue": "5주차 결과물을 저장하기 전에",
+      "words": [
+        {
+          "en": "save",
+          "ko": "저장하다"
+        },
+        {
+          "en": "included",
+          "ko": "포함된"
+        }
+      ],
+      "tip": "‘save’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "마무리"
+    },
+    {
+      "id": 211,
+      "unit": 22,
+      "english": "Today, we'll prepare our presentation and practice speaking.",
+      "korean": "오늘은 발표를 준비하고 말하는 연습을 할 거예요.",
+      "chunk": "Today, / we'll prepare our presentation / and practice speaking.",
+      "cue": "6주차 발표 준비 수업을 시작할 때",
+      "words": [
+        {
+          "en": "presentation",
+          "ko": "발표"
+        },
+        {
+          "en": "practice",
+          "ko": "연습하다"
+        }
+      ],
+      "tip": "‘presentation’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "시작"
+    },
+    {
+      "id": 212,
+      "unit": 22,
+      "english": "Decide which part each team member will explain.",
+      "korean": "모둠원마다 어떤 부분을 설명할지 정하세요.",
+      "chunk": "Decide which part / each team member will explain.",
+      "cue": "모두에게 발표 역할을 나누어 줄 때",
+      "words": [
+        {
+          "en": "each team member",
+          "ko": "각 모둠원"
+        },
+        {
+          "en": "explain",
+          "ko": "설명하다"
+        }
+      ],
+      "tip": "‘each team member’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "활동 안내"
+    },
+    {
+      "id": 213,
+      "unit": 22,
+      "english": "Prepare a five-minute presentation with a speaking part for everyone.",
+      "korean": "모두가 말할 부분을 맡아 5분 발표를 준비하세요.",
+      "chunk": "Prepare a five-minute presentation / with a speaking part for everyone.",
+      "cue": "모둠 발표의 시간과 참여 기준을 안내할 때",
+      "words": [
+        {
+          "en": "five-minute",
+          "ko": "5분짜리"
+        },
+        {
+          "en": "everyone",
+          "ko": "모두"
+        }
+      ],
+      "tip": "‘five-minute’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "활동 안내"
+    },
+    {
+      "id": 214,
+      "unit": 22,
+      "english": "Write your own one-minute English script for visitors to your booth.",
+      "korean": "부스 방문객에게 말할 1분짜리 영어 대본을 각자 쓰세요.",
+      "chunk": "Write your own one-minute English script / for visitors to your booth.",
+      "cue": "개인별 영어 부스 소개 대본을 작성할 때",
+      "words": [
+        {
+          "en": "your own",
+          "ko": "자신의"
+        },
+        {
+          "en": "one-minute",
+          "ko": "1분짜리"
+        }
+      ],
+      "tip": "‘your own’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "활동 안내"
+    },
+    {
+      "id": 215,
+      "unit": 22,
+      "english": "Introduce the problem, your findings, and your idea in one minute.",
+      "korean": "1분 동안 문제와 알아낸 내용, 해결 아이디어를 소개하세요.",
+      "chunk": "Introduce the problem, / your findings, and your idea / in one minute.",
+      "cue": "개인 대본에 넣을 내용을 정리하도록 도울 때",
+      "words": [
+        {
+          "en": "introduce",
+          "ko": "소개하다"
+        },
+        {
+          "en": "in one minute",
+          "ko": "1분 안에"
+        }
+      ],
+      "tip": "‘introduce’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "순회 지도"
+    },
+    {
+      "id": 216,
+      "unit": 22,
+      "english": "Use a timer and practice your script with a partner.",
+      "korean": "타이머를 켜고 짝과 함께 대본을 연습하세요.",
+      "chunk": "Use a timer / and practice your script with a partner.",
+      "cue": "1분 소개 시간을 확인하며 연습할 때",
+      "words": [
+        {
+          "en": "timer",
+          "ko": "타이머"
+        },
+        {
+          "en": "partner",
+          "ko": "짝"
+        }
+      ],
+      "tip": "‘timer’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "활동 안내"
+    },
+    {
+      "id": 217,
+      "unit": 22,
+      "english": "Point to your poster while explaining your team's work.",
+      "korean": "우리 모둠의 활동을 설명하며 포스터를 가리켜 보세요.",
+      "chunk": "Point to your poster / while explaining your team's work.",
+      "cue": "포스터를 활용해 설명하도록 도울 때",
+      "words": [
+        {
+          "en": "point to",
+          "ko": "가리키다"
+        },
+        {
+          "en": "while",
+          "ko": "~하는 동안"
+        }
+      ],
+      "tip": "‘point to’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "순회 지도"
+    },
+    {
+      "id": 218,
+      "unit": 22,
+      "english": "Reflect on what you observed, discovered, analyzed, and designed.",
+      "korean": "무엇을 관찰하고 발견하고 분석하고 설계했는지 돌아보세요.",
+      "chunk": "Reflect on what you observed, / discovered, analyzed, / and designed.",
+      "cue": "프로젝트의 네 가지 탐구 과정을 성찰할 때",
+      "words": [
+        {
+          "en": "reflect on",
+          "ko": "돌아보다"
+        },
+        {
+          "en": "observed",
+          "ko": "관찰한"
+        }
+      ],
+      "tip": "‘reflect on’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": true,
+      "phase": "공유"
+    },
+    {
+      "id": 219,
+      "unit": 22,
+      "english": "Tell us how your thinking changed during the project.",
+      "korean": "프로젝트를 하면서 생각이 어떻게 달라졌는지 말해 주세요.",
+      "chunk": "Tell us how your thinking changed / during the project.",
+      "cue": "탐구하며 달라진 생각을 나눌 때",
+      "words": [
+        {
+          "en": "thinking",
+          "ko": "생각"
+        },
+        {
+          "en": "changed",
+          "ko": "달라졌다"
+        }
+      ],
+      "tip": "‘thinking’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "공유"
+    },
+    {
+      "id": 220,
+      "unit": 22,
+      "english": "Next week, each team will give its full presentation.",
+      "korean": "다음 주에는 모둠별로 전체 발표를 할 거예요.",
+      "chunk": "Next week, / each team will give / its full presentation.",
+      "cue": "6주차를 마치며 7주차 발표를 예고할 때",
+      "words": [
+        {
+          "en": "next week",
+          "ko": "다음 주"
+        },
+        {
+          "en": "full presentation",
+          "ko": "전체 발표"
+        }
+      ],
+      "tip": "‘next week’ 부분을 익히고, / 에서 짧게 쉬며 말해 보세요.",
+      "essential": false,
+      "phase": "마무리"
     }
   ],
   "scripts": [
     {
       "week": 5,
       "scene": "opening",
-      "title": "5주차 시작 · 지난 결과에서 출발",
+      "title": "5주차 시작 · 포스터와 영어 퀴즈",
       "lines": [
         {
           "en": "Good morning, everyone!",
           "ko": "여러분, 좋은 아침이에요!"
         },
         {
-          "en": "Let's open our work from last week.",
-          "ko": "지난주 작업물을 열어 봅시다."
+          "en": "Today, we'll turn our findings into a poster.",
+          "ko": "오늘은 우리가 알아낸 내용을 포스터로 만들 거예요."
         },
         {
-          "en": "Today, we'll choose one change and test it.",
-          "ko": "오늘은 바꿀 점 하나를 골라 실험해 볼 거예요."
+          "en": "Use your experiment records to explain your idea.",
+          "ko": "실험 기록을 활용해 아이디어를 설명하세요."
         },
         {
-          "en": "Use your results to explain what you want to improve.",
-          "ko": "무엇을 개선하고 싶은지 지난 결과를 근거로 설명해 보세요."
+          "en": "Add three English mission questions at the bottom.",
+          "ko": "아래쪽에는 영어 미션 퀴즈 3개를 넣으세요."
         }
       ]
     },
     {
       "week": 5,
       "scene": "break",
-      "title": "5주차 쉬는 시간 · 기록하고 멈추기",
+      "title": "5주차 쉬는 시간 · 저장하고 쉬기",
       "lines": [
         {
-          "en": "Let's pause here and save our work.",
-          "ko": "여기서 잠시 멈추고 작업한 내용을 저장하세요."
+          "en": "Let's save our posters before the break.",
+          "ko": "쉬기 전에 포스터를 저장합시다."
         },
         {
-          "en": "Write down what you need to do next.",
-          "ko": "다음에 할 일을 적어 두세요."
+          "en": "Check which parts your group still needs to finish.",
+          "ko": "모둠에서 아직 마무리할 부분을 확인하세요."
         },
         {
-          "en": "Put your equipment in a safe place.",
-          "ko": "실험 기구를 안전한 곳에 두세요."
+          "en": "Leave a note so you can continue easily.",
+          "ko": "돌아와서 바로 이어 할 수 있도록 메모를 남기세요."
         },
         {
           "en": "Enjoy your break!",
@@ -4222,151 +4655,152 @@
     {
       "week": 5,
       "scene": "resume",
-      "title": "5주차 다시 시작 · 확인과 비교",
+      "title": "5주차 다시 시작 · 퀴즈 3개 확인",
       "lines": [
         {
-          "en": "Welcome back! Please take your seats.",
-          "ko": "다시 모였네요! 자리에 앉아 주세요."
+          "en": "Welcome back! Please return to your groups.",
+          "ko": "다시 모였네요! 모둠 자리로 돌아가 주세요."
         },
         {
-          "en": "Check what your group still needs to finish.",
-          "ko": "우리 모둠이 마무리해야 할 일을 확인하세요."
+          "en": "Let's finish our posters and three English mission questions.",
+          "ko": "포스터와 영어 미션 퀴즈 3개를 마무리합시다."
         },
         {
-          "en": "Keep the measuring method the same.",
-          "ko": "측정 방법은 같게 유지하세요."
+          "en": "Make sure visitors can find every answer in the poster.",
+          "ko": "방문객이 모든 정답을 포스터에서 찾을 수 있게 하세요."
         },
         {
-          "en": "Compare your results and explain what they show.",
-          "ko": "결과를 비교하고 무엇을 알 수 있는지 설명해 보세요."
+          "en": "Ask a teammate to try the quiz.",
+          "ko": "모둠 친구에게 퀴즈를 풀어 보라고 하세요."
         }
       ]
     },
     {
       "week": 5,
       "scene": "closing",
-      "title": "5주차 마무리 · 개선과 다음 질문",
+      "title": "5주차 마무리 · 포스터 저장과 발표 준비 예고",
       "lines": [
         {
-          "en": "Tell us one change and one thing you learned.",
-          "ko": "바꾼 점 하나와 배운 점 하나를 말해 주세요."
+          "en": "Check that your poster includes all three English mission questions.",
+          "ko": "포스터에 영어 미션 퀴즈 3개가 모두 있는지 확인하세요."
         },
         {
-          "en": "Save your revised work and upload it to Padlet.",
-          "ko": "수정한 작업물을 저장하고 패들렛에 올려 주세요."
+          "en": "Save your work and upload it to Padlet.",
+          "ko": "작업물을 저장하고 패들렛에 올리세요."
         },
         {
-          "en": "Leave a note about anything you still need to test.",
-          "ko": "아직 실험할 것이 남았다면 적어 두세요."
+          "en": "Next week, we'll prepare our presentations and individual English scripts.",
+          "ko": "다음 주에는 발표와 개인별 영어 대본을 준비할 거예요."
         },
         {
-          "en": "Next week, we'll give each other feedback.",
-          "ko": "다음 주에는 서로에게 피드백을 줄 거예요."
-        },
-        {
-          "en": "Thank you for your hard work. See you next week!",
-          "ko": "오늘 열심히 해 줘서 고마워요. 다음 주에 만나요!"
+          "en": "Thank you for your teamwork. See you next week!",
+          "ko": "함께 힘을 모아 줘서 고마워요. 다음 주에 만나요!"
         }
       ]
     },
     {
       "week": 6,
       "scene": "opening",
-      "title": "6주차 시작 · 친구의 눈으로 보기",
+      "title": "6주차 시작 · 모두가 말하는 발표 준비",
       "lines": [
         {
           "en": "Welcome back to our STEAM class!",
-          "ko": "우리 STEAM 수업에 다시 온 것을 환영해요!"
+          "ko": "STEAM 수업에 다시 온 것을 환영해요!"
         },
         {
-          "en": "Today, we'll help each other improve our projects.",
-          "ko": "오늘은 서로 도우며 프로젝트를 다듬을 거예요."
+          "en": "Today, we'll prepare a five-minute team presentation.",
+          "ko": "오늘은 모둠별 5분 발표를 준비할 거예요."
         },
         {
-          "en": "Get your latest work ready to share.",
-          "ko": "가장 최근 작업물을 소개할 준비를 하세요."
+          "en": "Everyone needs a speaking part.",
+          "ko": "모두가 말할 부분을 맡아야 해요."
         },
         {
-          "en": "Listen carefully and ask helpful questions.",
-          "ko": "잘 듣고 도움이 되는 질문을 해 보세요."
+          "en": "You'll also write your own one-minute English script for booth visitors.",
+          "ko": "부스 방문객에게 말할 1분 영어 대본도 각자 쓸 거예요."
+        },
+        {
+          "en": "Each person's script should explain the whole project.",
+          "ko": "각자의 1분 대본에는 프로젝트 전체 내용을 담으세요."
         }
       ]
     },
     {
       "week": 6,
       "scene": "break",
-      "title": "6주차 쉬는 시간 · 의견 남기기",
+      "title": "6주차 쉬는 시간 · 역할과 대본 저장",
       "lines": [
         {
-          "en": "Let's finish this round of feedback.",
-          "ko": "이번 피드백 활동을 마무리합시다."
+          "en": "Let's pause and save our scripts.",
+          "ko": "잠시 멈추고 대본을 저장합시다."
         },
         {
-          "en": "Thank your partner group for their ideas.",
-          "ko": "의견을 준 짝모둠에게 고맙다고 말해 주세요."
+          "en": "Check that everyone knows their speaking part.",
+          "ko": "모두 자신이 말할 부분을 알고 있는지 확인하세요."
         },
         {
-          "en": "Save the suggestions you want to remember.",
-          "ko": "기억하고 싶은 제안을 기록해 두세요."
+          "en": "After the break, we'll practice with a timer.",
+          "ko": "쉬는 시간이 끝나면 타이머로 시간을 재며 연습할 거예요."
         },
         {
-          "en": "Take a break, and we'll continue when you return.",
-          "ko": "잠깐 쉬고 돌아와서 이어 가요."
+          "en": "Enjoy your break!",
+          "ko": "쉬는 시간 잘 보내요!"
         }
       ]
     },
     {
       "week": 6,
       "scene": "resume",
-      "title": "6주차 다시 시작 · 의견을 수정으로",
+      "title": "6주차 다시 시작 · 1분 영어 소개 연습",
       "lines": [
         {
-          "en": "Break time is over. Please return to your own groups.",
-          "ko": "쉬는 시간이 끝났어요. 자기 모둠 자리로 돌아가 주세요."
+          "en": "Break time is over. Please take your seats.",
+          "ko": "쉬는 시간이 끝났어요. 자리에 앉아 주세요."
         },
         {
-          "en": "Choose one suggestion to try first.",
-          "ko": "먼저 시도해 볼 제안 하나를 고르세요."
+          "en": "Use a timer and practice your one-minute English script with a partner.",
+          "ko": "타이머를 켜고 짝과 함께 1분 영어 대본을 연습하세요."
         },
         {
-          "en": "Make your poster easier for visitors to understand.",
-          "ko": "방문객이 이해하기 쉽도록 포스터를 다듬어 보세요."
+          "en": "Then switch roles so both of you can practice.",
+          "ko": "그런 다음 역할을 바꿔 두 사람 모두 연습하세요."
         },
         {
-          "en": "Check your quiz question and its answer, too.",
-          "ko": "퀴즈 문제와 정답도 확인해 주세요."
+          "en": "Tell your partner one thing that was clear and one thing to improve.",
+          "ko": "짝에게 잘 이해된 점과 다듬으면 좋을 점을 하나씩 말해 주세요."
         }
       ]
     },
     {
       "week": 6,
       "scene": "closing",
-      "title": "6주차 마무리 · 수정한 점과 남은 일",
+      "title": "6주차 마무리 · 탐구 성찰과 다음 주 발표",
       "lines": [
         {
-          "en": "What changed after you heard the feedback?",
-          "ko": "피드백을 듣고 어떤 부분이 달라졌나요?"
+          "en": "Reflect on what you observed, discovered, analyzed, and designed.",
+          "ko": "무엇을 관찰하고 발견하고 분석하고 설계했는지 돌아보세요."
         },
         {
-          "en": "Tell us one useful idea from another group.",
-          "ko": "다른 모둠에서 얻은 유용한 아이디어 하나를 말해 주세요."
+          "en": "Tell us how your thinking changed during the project.",
+          "ko": "프로젝트를 하며 생각이 어떻게 달라졌는지 말해 주세요."
         },
         {
-          "en": "Upload your latest poster and quiz to Padlet.",
-          "ko": "최신 포스터와 퀴즈를 패들렛에 올려 주세요."
+          "en": "Save your team presentation and your own English script.",
+          "ko": "모둠 발표 자료와 자신의 영어 대본을 저장하세요."
         },
         {
-          "en": "Write down what you still need to prepare.",
-          "ko": "앞으로 준비할 일을 적어 두세요."
+          "en": "Next week, we'll give our full presentations and share feedback.",
+          "ko": "다음 주에는 전체 발표를 하고 피드백을 나눌 거예요."
         },
         {
-          "en": "You worked well together today. Give yourselves a hand!",
-          "ko": "오늘 함께 힘을 모아 잘했어요. 우리 모두에게 박수를 보내요!"
+          "en": "Give yourselves a hand for your hard work!",
+          "ko": "열심히 한 우리 모두에게 박수를 보내요!"
         }
       ]
     }
   ]
-}</script>
+}
+</script>
 <script>
 'use strict';
 const DATA=JSON.parse(document.getElementById('lessonData').textContent);
@@ -4391,8 +4825,8 @@ const WEEK_KEY=KEY+'-week';
 let selectedWeek='5';try{const chosen=new URLSearchParams(location.search).get('week')||localStorage.getItem(WEEK_KEY);if(['5','6','review','all'].includes(chosen))selectedWeek=chosen;}catch{}
 let quickWeek=selectedWeek==='6'?6:5,quickScene='opening';
 const WEEK_COPY={
- '5':{heading:'실험을 보완하는 말,<br><span>영어로 준비해요.</span>',en:'What will you change next time?',ko:'다음에는 무엇을 바꾸고 싶나요?',name:'5주차'},
- '6':{heading:'질문과 피드백,<br><span>영어로 이어가요.</span>',en:'What evidence supports your idea?',ko:'어떤 근거가 여러분의 생각을 뒷받침하나요?',name:'6주차'},
+ '5':{heading:'포스터와 영어 퀴즈,<br><span>함께 완성해요.</span>',en:'Put three English mission questions at the bottom of your poster.',ko:'포스터 아래에 영어 미션 퀴즈 3개를 넣으세요.',name:'5주차'},
+ '6':{heading:'모두의 발표와 1분 소개,<br><span>영어로 준비해요.</span>',en:'Write your own one-minute English script for visitors to your booth.',ko:'부스 방문객에게 말할 1분짜리 영어 대본을 각자 쓰세요.',name:'6주차'},
  review:{heading:'함께 준비했던 말,<br><span>다시 꺼내 봐요.</span>',en:'Change only one thing at a time.',ko:'한 번에 한 가지만 바꾸세요.',name:'3·4주차'},
  all:{heading:'수업의 모든 순간,<br><span>영어로 말할 수 있게.</span>',en:'Let us learn from each other.',ko:'서로에게서 배워 봅시다.',name:'전체'}
 };
@@ -4519,9 +4953,9 @@ function renderHome(){
  $('weekHeading').innerHTML=copy.heading;$('heroEnglish').textContent=copy.en;$('heroKorean').textContent=copy.ko;
  $('priorityStart').textContent=(selectedWeek==='5'||selectedWeek==='6')?'핵심 10문장 · 5개씩 연습 →':'5문장 게임 시작 →';
  $('weekSummary').textContent=`${copy.name} · ${list.length}문장${(selectedWeek==='5'||selectedWeek==='6')?' 중 핵심 10문장부터 가볍게 시작해요.':' · 필요한 장면을 골라 연습해요.'}`;
- $('unitsHint').textContent=(selectedWeek==='5'||selectedWeek==='6')?'새 표현 50문장 + 기존 표현 10문장':'게임 3단계 + 선택 말하기';
+ $('unitsHint').textContent=`${scopedUnits().length}개 단원 · ${list.length}문장 · 게임 3단계 + 선택 말하기`;
  $('weekFilters').querySelectorAll('[data-week]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.week===selectedWeek)));
- $('units').innerHTML=scopedUnits().map(u=>{const ps=DATA.phrases.filter(p=>p.unit===u.id),n=ps.filter(p=>hasPracticed(p.id)).length;return `<article class="unit ${u.week===4?'week4':u.week>=5?'newWeek':''}"><div class="unitnum">${u.id}</div><div><h3>${esc(u.title)}${u.id>10?'<span class="unitBadge">NEW</span>':''}</h3><p>${u.week}주차 · ${esc(u.description)}</p><div class="progressmini"><i style="width:${n/ps.length*100}%"></i></div><div class="unitfooter"><button class="secondary" data-unit="${u.id}">5문장 게임</button><button class="quiet" data-speak="${u.id}">말하기만</button><button class="quiet" data-challenge="${u.id}">${ps.length}문장 말하기 도전</button><span class="small">학습 ${n}/${ps.length}</span>${progress.challenges[u.id]?'<span class="completebadge">말하기 도전 완료 ✓</span>':''}</div></div></article>`;}).join('');
+ $('units').innerHTML=scopedUnits().map(u=>{const ps=DATA.phrases.filter(p=>p.unit===u.id),n=ps.filter(p=>hasPracticed(p.id)).length;return `<article class="unit ${u.week===4?'week4':u.week>=5?'newWeek':''}"><div class="unitnum">${u.id}</div><div><h3>${esc(u.title)}${u.id>20?'<span class="unitBadge">NEW</span>':''}</h3><p>${u.week}주차 · ${esc(u.description)}</p><div class="progressmini"><i style="width:${n/ps.length*100}%"></i></div><div class="unitfooter"><button class="secondary" data-unit="${u.id}">5문장 게임</button><button class="quiet" data-speak="${u.id}">말하기만</button><button class="quiet" data-challenge="${u.id}">${ps.length}문장 말하기 도전</button><span class="small">학습 ${n}/${ps.length}</span>${progress.challenges[u.id]?'<span class="completebadge">말하기 도전 완료 ✓</span>':''}</div></div></article>`;}).join('');
  renderQuick();
 }
 function setWeek(value){
